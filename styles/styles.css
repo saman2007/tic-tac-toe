@@ -1,11 +1,14 @@
 @import "reset.css";
 
 body {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);flex-flow: column;
+    -webkit-user-select: none;      
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .board {
@@ -21,6 +24,7 @@ body {
     box-shadow:  3px 1px 40px #555555;
     padding: 5px;
     margin-bottom: 40px;
+    margin-top: 70px;
 }
 
 .board div {
@@ -46,4 +50,26 @@ body {
 .status {
     font-size: xx-large;
     font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 30px;
+    background-color: rgb(36, 230, 29);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px #858585;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+button:hover {
+    box-shadow: 0px 1px 4px #858585;
+}
+
+@media (max-width: 576px) {
+    .board {
+        width: 95%;
+    }
 }
